@@ -1,4 +1,4 @@
-## Day 1 – [date]: Planning InkDeck
+## Day 1 – 14/10/2026: Planning InkDeck
 **Time spent:** ~ 1 hours
 
 - Decided to build a DIY e-reader with physical page buttons
@@ -17,7 +17,7 @@
 - [ ] Find the physical pin numbers on the 40-pin header
 - [ ] Draw the schematic in KiCad
 
-## Day 2 – [date]: InkDeck schematic + PCB
+## Day 2 – 15/10/2026: InkDeck schematic + PCB
 **Time spent:** ~ 6 hours
 
 ### What I did
