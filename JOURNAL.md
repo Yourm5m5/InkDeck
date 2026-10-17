@@ -1,4 +1,4 @@
-## Day 1 – 14/10/2026: Planning InkDeck
+<img width="1125" height="707" alt="image" src="https://github.com/user-attachments/assets/1fdd8b21-7018-4f3a-9c10-1bf348d4c7ef" />## Day 1 – 14/10/2026: Planning InkDeck
 **Time spent:** ~ 1 hours
 
 - Decided to build a DIY e-reader with physical page buttons
@@ -56,3 +56,60 @@
 ### Next steps
 - [ ] Enclosure CAD
 - [ ] Firmware (EPUB reader + buttons + deep sleep)
+
+## Day 3 – 17/10/2026: InkDeck enclosure CAD
+**Time spent:** ~7 hours
+
+### What I did
+- Designed a handheld case for the LilyGo T5 4.7" + my grip PCB
+- Started from a concept + example reference model and dimensioned drawing
+  (made with AI help), then [modelled / adjusted] the parts myself in Fusion 360
+- Set up **user parameters** for the board, battery and button positions so I
+  can update everything once the real parts arrive
+- Final size: **153 × 72 × 23.5 mm** (a bit smaller than a paperback)
+
+### Parts
+1. **Front shell**
+   - 106 × 61 mm window for the e-paper screen
+   - 3 button holes (Ø6.4) lined up with PREV / NEXT / MENU on the grip PCB.
+     Positions taken straight from my KiCad layout (13.2 mm from the top, ~10 mm apart)
+   - 4 standoffs with M2 heat-set inserts to hold the grip PCB
+   - Cut-outs: power-switch slot (top), USB-C (left), microSD + LilyGo button
+     pin-holes (bottom)
+   - Small recess inside so the tall JST-PH battery connectors fit
+2. **Back cover**
+   - Fence that holds the LiPo battery behind the LilyGo
+   - Raised grip ridge behind the buttons so it's comfy to hold one-handed
+   - 4 × M2 screws into inserts in the corner bosses
+3. **Button caps (×3)**
+   - Plunger pokes out 1.2 mm; a 9 mm flange stops it falling out
+
+### Decisions
+| Decision | Why |
+|---|---|
+| Grip on the right, USB-C on the left | Thumb reaches the buttons; cable doesn't get in the way |
+| Separate printed button caps | Tact switches sit 5 mm below the surface, so caps reach them |
+| Battery behind the screen | Keeps the case narrow; battery + foam holds the LilyGo in place |
+| M2 heat-set inserts | Small enough for a thin case, and it can be opened many times |
+| Parametric model | Screen, USB-C and battery positions aren't confirmed yet |
+
+### Problems / what I learned
+- Had to work out the stack-up depth: screen glass → button height → PCB → battery
+- JST-PH connectors were taller than the gap behind the front plate, so I added a recess
+- [anything else you hit in Fusion, e.g. sketch constraints, fillets failing, etc.]
+
+### Still to check (placeholders)
+- Exact position of the e-paper active area on the LilyGo
+- USB-C, microSD and LilyGo button positions
+- Real battery size (assumed 60 × 50 × 6 mm)
+
+### Images
+
+<img width="1022" height="692" alt="image" src="https://github.com/user-attachments/assets/eab6d722-e9ae-4315-b2ca-74cef5a6b1ca" />
+<img width="1170" height="753" alt="image" src="https://github.com/user-attachments/assets/a2d1f387-2672-4a5b-b49b-78fbb14a3d21" />
+<img width="1157" height="714" alt="image" src="https://github.com/user-attachments/assets/e4e2a22a-09ec-456e-9b69-2995b8165f97" />
+<img width="1125" height="707" alt="image" src="https://github.com/user-attachments/assets/8316e773-5d09-4994-95fb-47c033008cb5" />
+
+
+### Next steps
+- [ ] Firmware: EPUB reader, button handling, deep sleep, haptic buzz
