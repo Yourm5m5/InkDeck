@@ -1,4 +1,4 @@
-<img width="1125" height="707" alt="image" src="https://github.com/user-attachments/assets/1fdd8b21-7018-4f3a-9c10-1bf348d4c7ef" />## Day 1 – 14/10/2026: Planning InkDeck
+## Day 1 – 14/10/2026: Planning InkDeck
 **Time spent:** ~ 1 hours
 
 - Decided to build a DIY e-reader with physical page buttons
@@ -11,7 +11,6 @@
 - Made a parts list (~$130–170 AUD)
 
 <img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/ce75c77c-bef0-4938-bd06-990af40a0df5" />
-
 
 ### Next steps
 - [ ] Find the physical pin numbers on the 40-pin header
@@ -51,7 +50,6 @@
 
 <img width="824" height="567" alt="image" src="https://github.com/user-attachments/assets/51734021-7b59-4a79-9b58-29b04453e634" />
 <img width="415" height="724" alt="image" src="https://github.com/user-attachments/assets/5c3be672-21ed-40ab-b6bf-e7dea0ae26f2" />
-
 
 ### Next steps
 - [ ] Enclosure CAD
@@ -96,7 +94,6 @@
 ### Problems / what I learned
 - Had to work out the stack-up depth: screen glass → button height → PCB → battery
 - JST-PH connectors were taller than the gap behind the front plate, so I added a recess
-- [anything else you hit in Fusion, e.g. sketch constraints, fillets failing, etc.]
 
 ### Still to check (placeholders)
 - Exact position of the e-paper active area on the LilyGo
@@ -109,7 +106,6 @@
 <img width="1170" height="753" alt="image" src="https://github.com/user-attachments/assets/a2d1f387-2672-4a5b-b49b-78fbb14a3d21" />
 <img width="1157" height="714" alt="image" src="https://github.com/user-attachments/assets/e4e2a22a-09ec-456e-9b69-2995b8165f97" />
 <img width="1125" height="707" alt="image" src="https://github.com/user-attachments/assets/8316e773-5d09-4994-95fb-47c033008cb5" />
-
 
 ### Next steps
 - [ ] Firmware: EPUB reader, button handling, deep sleep, haptic buzz
