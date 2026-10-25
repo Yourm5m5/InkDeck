@@ -2,10 +2,6 @@
 
 **A pocket e-paper e-reader with physical page-turn buttons, weeks of battery life, and books loaded over Wi-Fi.**
 
-![InkDeck](CAD/images/inkdeck-assembled.png)
-
-> Built for **Hack Club Forge** · Build log: [JOURNAL.md](JOURNAL.md) · Firmware guide: [firmware/FIRMWARE.md](firmware/FIRMWARE.md) · Assembly guide: [CAD/ASSEMBLY.md](CAD/ASSEMBLY.md)
-
 ## What is InkDeck?
 
 InkDeck is a DIY e-reader about the size of a paperback (153 × 72 × 23.5 mm). It has a 4.7" e-paper screen that looks like printed paper, so it's easy on the eyes and readable in sunlight, and it keeps the page on screen even with the power off.
@@ -173,16 +169,12 @@ The grip is on the right so your thumb reaches the buttons, and USB-C is on the 
 
 Shows how the screen, grip PCB, battery, motor, printed parts and screws fit together. The parts list, step-by-step assembly and wiring are in **[CAD/ASSEMBLY.md](CAD/ASSEMBLY.md)**.
 
-![Exploded view](CAD/images/inkdeck-exploded.png)
-
 ### Renders
 
 <img width="1022" height="692" alt="Enclosure" src="https://github.com/user-attachments/assets/eab6d722-e9ae-4315-b2ca-74cef5a6b1ca" />
 <img width="1170" height="753" alt="Enclosure" src="https://github.com/user-attachments/assets/a2d1f387-2672-4a5b-b49b-78fbb14a3d21" />
 <img width="1157" height="714" alt="Enclosure" src="https://github.com/user-attachments/assets/e4e2a22a-09ec-456e-9b69-2995b8165f97" />
 <img width="1125" height="707" alt="Enclosure" src="https://github.com/user-attachments/assets/8316e773-5d09-4994-95fb-47c033008cb5" />
-
-![Dimensioned drawing](CAD/images/inkdeck-drawing.png)
 
 > The screen window, USB-C, microSD and battery sizes are placeholders and will be checked against the real parts before the final print.
 
@@ -251,16 +243,6 @@ InkDeck/
 ```
 
 ---
-
-## Status
-
-- [x] Planning, parts selection and block diagram
-- [x] Schematic + grip PCB (KiCad), DRC clean, Gerbers exported
-- [x] Enclosure CAD (Fusion 360) + exploded view
-- [x] Firmware: EPUB reader, buttons, haptics, deep sleep, Wi-Fi upload
-- [ ] Order parts + PCB
-- [ ] Assemble, flash and test on the real hardware
-- [ ] Measure the real parts, final print and demo video
 
 ---
 
