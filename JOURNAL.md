@@ -112,7 +112,7 @@
 ### Next steps
 - [ ] Firmware: EPUB reader, button handling, deep sleep, haptic buzz
 
-## Day 4-12 – 25/10/2026: InkDeck firmware
+## Day 4-12 – 18-25/10/2026: InkDeck firmware
 **Time spent:** ~ 14 hours
 
 ### What I did
