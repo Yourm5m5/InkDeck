@@ -194,6 +194,7 @@ esp_deep_sleep_start();
   and swaps them for `"` and `--`
 - Shop-bought books with DRM can't be read → shows a "This book has DRM" message instead of crashing
 - IO45 is a strapping pin → the motor pin is set LOW as the very first thing at boot
+<img width="0" height="0" alt="image" src="https://github.com/user-attachments/assets/1cdd64ca-6c80-4e4b-89fd-7ab4e5b3adec" />
 
 ### Testing
 - I don't have the parts yet, so the firmware was tested on a computer:
