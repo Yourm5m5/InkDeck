@@ -106,6 +106,8 @@
 <img width="1170" height="753" alt="image" src="https://github.com/user-attachments/assets/a2d1f387-2672-4a5b-b49b-78fbb14a3d21" />
 <img width="1157" height="714" alt="image" src="https://github.com/user-attachments/assets/e4e2a22a-09ec-456e-9b69-2995b8165f97" />
 <img width="1125" height="707" alt="image" src="https://github.com/user-attachments/assets/8316e773-5d09-4994-95fb-47c033008cb5" />
+<img width="712" height="619" alt="image" src="https://github.com/user-attachments/assets/4c9166d9-3aa8-4f84-b89e-d44469437411" />
+
 
 ### Next steps
 - [ ] Firmware: EPUB reader, button handling, deep sleep, haptic buzz
