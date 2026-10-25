@@ -109,3 +109,98 @@
 
 ### Next steps
 - [ ] Firmware: EPUB reader, button handling, deep sleep, haptic buzz
+
+## Day 4-12 – 25/10/2026: InkDeck firmware
+**Time spent:** ~ 14 hours
+
+### What I did
+- Wrote the firmware in PlatformIO (Arduino framework) with the LilyGo-EPD47 e-paper library
+- Split the code into small files so it's easier to follow:
+  - `config.h` – every pin and setting in one place
+  - `buttons.h` – debounced buttons with tap / hold / long press
+  - `haptic.h` – vibration patterns
+  - `epub.cpp` – turns an EPUB into plain text
+  - `main.cpp` – screens, page layout, Wi-Fi upload, sleep and the main loop
+- **EPUB reader**
+  - An EPUB is a ZIP file full of web pages. The firmware reads the ZIP's file list,
+    finds `content.opf` (title + chapter order), unzips each chapter, removes the
+    HTML tags and saves plain text to the SD card
+  - Uses the unzip function built into the ESP32-S3's ROM, so no extra library
+  - Only converts once per book; after that it opens instantly
+  - `<p>` = indented paragraph, headings get blank lines, `&amp;` etc. become real characters
+  - Every chapter starts on a new page
+- **Pages**
+  - Greedy word-wrap: add words to a line until the next one doesn't fit
+  - Page start positions are saved on the SD card, so it can show "57 / 312" and go back
+  - Footer shows the title, chapter, page and battery: `Ch 3/27   57 / 312   70%`
+  - Bookmark saved on every page turn
+- **Buttons**
+  - A press only counts once the button has been stable for 25 ms (stops double page turns)
+  - Hold NEXT / PREV 0.7 s = jump a chapter
+  - MENU: tap = library, hold 1 s = Wi-Fi upload, hold 3 s = sleep
+- **Haptic buzz** – a different feel for every action
+- **Deep sleep** – after 10 min idle, a 3 s MENU hold, or a nearly flat battery.
+  MENU (IO10) wakes it on the same page
+- **Wi-Fi upload** – the reader makes its own hotspot; a phone can add `.epub` / `.txt`
+  books or delete them
+- Wrote `FIRMWARE.md` explaining every part with code snippets and diagrams
+
+### Controls
+| Button | Reading | Library |
+|---|---|---|
+| NEXT / PREV | Next / previous page | Move down / up |
+| Hold NEXT / PREV (0.7 s) | Next / previous chapter | Move 5 rows |
+| MENU | Open the library | Open the book / vibration on-off |
+| Hold MENU 1 s | Wi-Fi upload | Wi-Fi upload |
+| Hold MENU 3 s | Sleep | Sleep |
+
+### Haptic patterns
+| Pattern | Meaning |
+|---|---|
+| 1 short buzz | Page turn |
+| 2 buzzes | Chapter jump |
+| 1 buzz at 1 s and 3 s while holding MENU | Shows which action you'll get |
+| 3 quick buzzes | Can't go further (first / last page) or book can't open |
+| 1 long buzz | Going to sleep |
+
+### Code snippets
+Debouncing – a new state only counts after 25 ms without changing:
+```cpp
+if (r != raw_) { raw_ = r; changedAt_ = now; }    // still bouncing: restart the timer
+if (raw_ != stable_ && now - changedAt_ >= DEBOUNCE_MS) stable_ = raw_;
+```
+
+Unzipping a chapter with the ESP32-S3's built-in ROM function:
+```cpp
+tinfl_status st = tinfl_decompress(d, in, &inBytes, out, out, &outBytes,
+                                   TINFL_FLAG_USING_NON_WRAPPING_OUTPUT_BUF);
+```
+
+Going to sleep:
+```cpp
+while (digitalRead(PIN_BTN_MENU) == LOW) delay(10);   // never sleep while MENU is held
+esp_sleep_enable_ext0_wakeup(GPIO_NUM_10, 0);         // MENU wakes it up
+esp_deep_sleep_start();
+```
+
+### Problems I solved
+- Sleeping while MENU was still held would wake it straight away (wake = MENU LOW),
+  so MENU now acts when you let go
+- The wake-up press was also opening the library → buttons already held at start-up
+  are ignored until released
+- The font doesn't have curly quotes or long dashes → the firmware checks the font
+  and swaps them for `"` and `--`
+- Shop-bought books with DRM can't be read → shows a "This book has DRM" message instead of crashing
+- IO45 is a strapping pin → the motor pin is set LOW as the very first thing at boot
+
+### Testing
+- I don't have the parts yet, so the firmware was tested on a computer:
+  - EPUB converter: 5 test books (including a DRM book and a fake EPUB) – all passed
+  - Simulation of the whole `main.cpp` with fake buttons, screen and SD card:
+    opening books, page turns, chapter jumps, sleep / wake, upload, low battery – 43 checks passed
+- Still needs testing on the real LilyGo
+
+### Next steps
+- [ ] Ship and complete readme
+
+*AI note: I used Claude to help write and test the firmware and the documentation.*
