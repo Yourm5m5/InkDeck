@@ -182,35 +182,35 @@ Shows how the screen, grip PCB, battery, motor, printed parts and screws fit tog
 
 ## Bill of materials
 
-All parts from **AliExpress** except the custom PCB, which comes from **JLCPCB**. Prices are **approximate AUD** and change with sales, exchange rates and shipping, so check the listing before ordering. Many small parts only come in packs, so you'll have spares.
+All parts are from **AliExpress** except the custom PCB, which comes from **JLCPCB**. Prices are **approximate AUD** and change with sales, exchange rates and shipping. Many small parts only come in packs, so you'll have spares. Where a listing has several options (value, size, pin count, pack size), pick the one in the **Part** column.
 
 ### Electronics
 
-| # | Part | Qty | Approx. AUD |
-|---|---|---|---|
-| 1 | LilyGo T5 4.7" E-Paper **S3** (ESP32-S3, N16R8) | 1 | $65.00 |
-| 2 | 3.7 V LiPo battery, ~2000 mAh, ~60 × 50 × 6 mm, JST-PH 2.0 | 1 | $12.00 |
-| 3 | 10 mm coin vibration motor, 3 V (pack of 10) | 1 pack | $5.00 |
-| 4 | 6 × 6 mm tact switches (pack of 100) | 1 pack | $3.00 |
-| 5 | Mini slide switch (pack of 20) | 1 pack | $3.00 |
-| 6 | AO3400 N-channel MOSFET, SOT-23 (pack of 50) | 1 pack | $3.00 |
-| 7 | 1N4148 diode (pack of 100) | 1 pack | $2.00 |
-| 8 | 10k resistors (pack of 100) | 1 pack | $2.00 |
-| 9 | JST-SH 1.0 mm 6-pin connectors + pre-crimped cable | 1 set | $5.00 |
-| 10 | JST-PH 2.0 mm 2-pin connectors + pre-crimped cable | 1 set | $4.00 |
-| 11 | microSD card, 8–32 GB | 1 | $8.00 |
-| 12 | Custom grip PCB, 5 pcs + shipping (**JLCPCB**) | 1 order | $18.00 |
-| | **Electronics subtotal** | | **$130.00** |
+| # | Part | Qty | Approx. AUD | Link |
+|---|---|---|---|---|
+| 1 | LilyGo T5 4.7" E-Paper **S3** V2.3 (ESP32-S3, N16R8) | 1 | $65.00 | [AliExpress](https://www.aliexpress.com/item/1005004647326743.html) |
+| 2 | 3.7 V LiPo battery, ~2000 mAh, ~60 × 50 × 6 mm (605060), JST-PH 2.0 | 1 | $12.00 | [AliExpress search](https://www.aliexpress.com/w/wholesale-605060-lipo-battery-jst.html) (pick 605060 with a PH 2.0 plug) |
+| 3 | 10 mm coin vibration motor, 3 V (pack of 10) | 1 pack | $5.00 | [AliExpress](https://www.aliexpress.com/item/1005007703166995.html) |
+| 4 | 6 × 6 mm tact switches (pack of 100) | 1 pack | $3.00 | [AliExpress](https://www.aliexpress.com/item/1005008112405709.html) |
+| 5 | SS12D00 mini slide switch (pack of 20) | 1 pack | $3.00 | [AliExpress](https://www.aliexpress.com/item/1005002190531295.html) |
+| 6 | AO3400 N-channel MOSFET, SOT-23 (pack of 50) | 1 pack | $3.00 | [AliExpress](https://www.aliexpress.com/item/32855231231.html) |
+| 7 | 1N4148 diode (pack of 100) | 1 pack | $2.00 | [AliExpress](https://www.aliexpress.com/item/1005003237310728.html) |
+| 8 | 10k resistors, 0805 (pack of 100) | 1 pack | $2.00 | [AliExpress](https://www.aliexpress.com/item/32702695904.html) |
+| 9 | JST-SH 1.0 mm 6-pin connectors + pre-crimped cable | 1 set | $5.00 | [AliExpress](https://www.aliexpress.com/item/1005004098040339.html) |
+| 10 | JST-PH 2.0 mm 2-pin connectors + pre-crimped cable | 1 set | $4.00 | [AliExpress](https://www.aliexpress.com/item/1005002827963237.html) |
+| 11 | microSD card, 8–32 GB | 1 | $8.00 | [AliExpress](https://www.aliexpress.com/item/1005004100092905.html) |
+| 12 | Custom grip PCB, 5 pcs + shipping (**JLCPCB**) | 1 order | $18.00 | [JLCPCB](https://jlcpcb.com) (upload the Gerbers in `PCB/`) |
+| | **Electronics subtotal** | | **$130.00** | |
 
 ### Enclosure
 
-| # | Part | Qty | Approx. AUD |
-|---|---|---|---|
-| 13 | PLA or PETG filament (~80 g of a 1 kg roll) | 1 | $3.00 |
-| 14 | M2 brass heat-set inserts (need 8, pack of 50) | 1 pack | $6.00 |
-| 15 | M2 screw assortment (4× M2×5, 4× M2×8) | 1 kit | $6.00 |
-| 16 | Thin double-sided foam tape (holds the battery) | 1 roll | $3.00 |
-| | **Enclosure subtotal** | | **$18.00** |
+| # | Part | Qty | Approx. AUD | Link |
+|---|---|---|---|---|
+| 13 | PLA or PETG filament (~80 g of a 1 kg roll) | 1 | $3.00 | [AliExpress](https://www.aliexpress.com/item/1005006789571723.html) |
+| 14 | M2 brass heat-set inserts (need 8, pack of 50) | 1 pack | $6.00 | [AliExpress](https://www.aliexpress.com/item/1005005109518603.html) |
+| 15 | M2 screw assortment (4× M2×5, 4× M2×8) | 1 kit | $6.00 | [AliExpress](https://www.aliexpress.com/item/32770172952.html) |
+| 16 | Thin double-sided foam tape (holds the battery) | 1 roll | $3.00 | [AliExpress](https://www.aliexpress.com/item/1005001168622872.html) |
+| | **Enclosure subtotal** | | **$18.00** | |
 
 ### Total
 
@@ -222,7 +222,7 @@ All parts from **AliExpress** except the custom PCB, which comes from **JLCPCB**
 
 Charging is through the LilyGo's own USB-C port, so any phone charger and USB-C cable works.
 
----
+> AliExpress listings change often. If a link stops working, search AliExpress for the exact part name in the table (e.g. "LilyGo T5 4.7 S3", "AO3400").
 
 ## Repository layout
 
